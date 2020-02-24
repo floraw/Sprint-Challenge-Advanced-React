@@ -2,10 +2,10 @@ import React from 'react';
 
 const PlayerCard = (props) => {
     return (
-        <div>
+        <div className='player-card'>
             <h3>{props.name}</h3>
             <p>Country: {props.country}</p>
-            <p>View rank: {props.searches}</p>
+            <p>Searches: {props.searches}</p>
         </div>
     )
 }

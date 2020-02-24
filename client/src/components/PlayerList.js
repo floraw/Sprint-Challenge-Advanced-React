@@ -1,6 +1,7 @@
 import React from 'react';
 
 import PlayerCard from './PlayerCard';
+import ToggleDark from "./ToggleDark";
 
 class PlayerList extends React.Component {
     constructor() {
@@ -22,6 +23,8 @@ class PlayerList extends React.Component {
         return (
             <div>
                 <h1>Women's World Cup players' search rankings</h1>
+                <ToggleDark />
+                <div className='player-container'>
                 {this.state.players.map(player => (
                     <PlayerCard 
                     key={player.id}
@@ -30,6 +33,7 @@ class PlayerList extends React.Component {
                     searches={player.searches}
                     />
                 ))}
+                </div>
             </div>
         )
     }
